@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/xatof/2/edit
+-->
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <button> Animate Circle </button>
+<script>
+var width= 400;
+var height= 400;
+var h=[];
+var amount=5;
+
+var habib = Raphael(0,0,width, height);
+h[1] = habib.circle(25,200,22);
+
+function carlos() {
+  h[1].animate({cx:width/2, cy:height}, 1000, juan);
+  h[2].animate({cx:width/2, cy:height}, 1000, juan);
+}
+
+function juan() {
+  h[1].animate({cx:width, cy:height/2}, 1000, moreno);
+}
+
+function moreno () {
+  h[1].animate({cx:width/2, cy:height/4}, 1000, ahmed);
+}
+
+function ahmed () {
+  h[1].animate({cx:23, cy:200}, 1000, carlos);
+}
+carlos();
+</script>
+</body>
+</html>
